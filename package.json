@@ -1,0 +1,24 @@
+{
+  "name": "visa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lint && npm run build",
+    "build": "rollup --config",
+    "lint": "eslint --ext \".js\" --ignore-path .gitignore . --max-warnings=0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "rollup": "^2.70.2"
+  },
+  "eslintConfig": {
+    "plugins": ["fp"],
+    "extends": "plugin:fp/recommended",
+    "ignorePatterns": [ "dist/", "rollup.config.js"] 
+  }
+}
