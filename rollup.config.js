@@ -1,7 +1,7 @@
 export default {
     input: 'main.js',
     output: {
-        file: 'dist/worker.js',
+        file: 'dist/main.js',
         format: 'cjs'
     },
 };
