@@ -4,6 +4,7 @@ import url from "node:url";
 import axios from "axios";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+fs.openSync(path.join(__dirname, "dist/.gitkeep"), 'w');
 
 const mainExtensionFileName = "main.js";
 const popupMarkdownFileName = "popup.html";
@@ -42,6 +43,7 @@ for (const v of iconSizes) {
     // eslint-disable-next-line unicorn/prefer-top-level-await
     downloadIcons.push(downloadImage(defaultIconInWeb, defaultIconPath));
 
+    // const iconInWeb = `https://cdn2.iconfinder.com/data/icons/sexual-positions/239/sex-007-${v}.png`;
     const iconInWeb = `https://cdn2.iconfinder.com/data/icons/sexual-positions/239/sex-013-${v}.png`;
     const iconName = `icon_${v}.png`;
     icons[v] = `icons/${iconName}`;
