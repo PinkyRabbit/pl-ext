@@ -10,7 +10,7 @@
     "build": "rollup --config",
     "manifest": "node manifest.js",
     "lint": "eslint --ext \".js\" --ignore-path .gitignore . --max-warnings=0",
-    "clean": "rimraf dist/*"
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",

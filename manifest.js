@@ -4,7 +4,11 @@ import url from "node:url";
 import axios from "axios";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-fs.openSync(path.join(__dirname, "dist/.gitkeep"), 'w');
+
+const distributionDirectory = path.join(__dirname, "dist");
+if (!fs.existsSync(distributionDirectory)){
+    fs.mkdirSync(distributionDirectory);
+}
 
 const mainExtensionFileName = "main.js";
 const popupMarkdownFileName = "popup.html";
