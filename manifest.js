@@ -17,6 +17,8 @@ const permissions = [
     "storage", 
     "activeTab",
     "scripting",
+
+    // "declarativeContent",
 ];
 
 const iconSizes = ["16", "32", "48", "128"];
